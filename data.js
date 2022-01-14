@@ -3,53 +3,55 @@ var app = new Vue({
     data: {
         box: {
             boxImage: [
-                    {image: 'img/01.jpg' },
-                    {image: 'img/02.jpg' },
-                    {image: 'img/03.jpg' },
-                    {image: 'img/04.jpg' },
-                    {image: 'img/05.jpg' }
+                {image: 'img/01.jpg' },
+                {image: 'img/02.jpg' },
+                {image: 'img/03.jpg' },
+                {image: 'img/04.jpg' },
+                {image: 'img/05.jpg' }
             ],
             boxTitle: [
-                {Title: 'Svezia' },
-                {Title: 'Svizzera' },
-                {Title: 'Gran Bretagna' },
-                {Title: 'Germania' },
-                {Title: 'Paradise' }
+                {title: 'Svezia' },
+                {title: 'Svizzera' },
+                {title: 'Gran Bretagna' },
+                {title: 'Germania' },
+                {title: 'Paradise' }
             ],
             boxDescr: [
-                {Descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
-                {Descr: 'Lorem ipsum.' },
-                {Descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' },
-                {Descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' },
-                {Descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam' }
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
+                {descr: 'Lorem ipsum.' },
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' },
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' },
+                {descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam' }
             ]
         },
+        boxProva: {
+            box1: [
+                {image: 'img/01.jpg' },
+                {title: 'Svezia' },
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
+            ],
+            box2: [
+                {image: 'img/02.jpg' },
+                {title: 'Svizzera' },
+                {descr: 'Lorem ipsum.' },
+            ],
+            box3: [
+                {image: 'img/03.jpg' },
+                {title: 'Gran Bretagna' },
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
+            ],
+            box4: [
+                {image: 'img/04.jpg' },
+                {title: 'Germania' },
+                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' },
+            ],
+            box5: [
+                {image: 'img/05.jpg' },
+                {title: 'Paradise' },
+                {descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam' }
+            ]
+        }
       
     }
   })
-
-
-let cont = 0;
-const imgGrandi = document.querySelector(`.img-grandi`)
-
-for(let isx = 0; isx < imgArr.length; isx++)
-{
-    imgGrandi.innerHTML += `
-    <div class="imgFunction" id="item-${isx+1}">
-        <img class="imgFunction" src="${imgArr[isx]}">
-        <h2 class"testoimggrande position-absolute">${titoloArr[isx]}</h2>
-        <p class"testoimggrande position-absolute">${paragrafoArr[isx]}</p>
-    </div>`;
-}
-
-const imgPiccole = document.querySelector(`.img-piccole`)
-
-for(let idx = 0; idx < imgArr.length; idx++)
-{
-    imgPiccole.innerHTML += `
-    <div id="item-${idx+1}">
-        <img class="imgFunction" src="${imgArr[idx]}">
-    </div>`;
-}
-
 
