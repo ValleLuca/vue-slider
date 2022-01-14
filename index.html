@@ -11,30 +11,27 @@
 </head>
 <body>
 
+    <div class="item active"></div>
     
-           
-
-   <div class="container">
-        <div v-for="post in boxProva">
-            <div class="items">
-                <div class="item active">
-                    <img :src="post.image">
-                    <div class="text">
-                        <h3>{{post.title}}</h3>
-                        <p>{{post.descr}}</p>
+    <div id="containerBox">
+        <div class="container">
+                    <div  v-for="post in box" class="items">
+                        <img :src="post.image">
+                        <div class="text">
+                            <h3>{{post.title}}</h3>
+                            <p>{{post.descr}}</p>
+                        </div>
                     </div>
-                </div> 
-            </div>
-        </div>
 
-        <div class="thumbs">
-            <div class="thumb active">
-                <img src="./img/01.jpg" alt="">
-            </div> 
-            <div class="prev"></div>
-            <div class="next"></div>
+                <div class="thumbs">
+                    <div class="thumb active">
+                        <img src="./img/01.jpg" alt="">
+                    </div> 
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
         </div>
-   </div>
+    </div>
 
    <!-- JS -->
    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

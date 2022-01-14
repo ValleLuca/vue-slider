@@ -16,9 +16,9 @@
  */
 
 var app = new Vue({
-    el: '#container',
+    el: '#containerBox',
     data: {
-        boxProva: [
+        box: [
             {
                 image: 'img/01.jpg',
                 title: 'Svezia',
@@ -79,22 +79,6 @@ let item = '';
 let thumb = '';
 let active = 1;
 
-for (let i = 0; i < items.length; i++) {
-    item += `
-        <div class="item">
-            <img src="${items[i]}" alt="">
-            <div class="text">
-                <h3>${title[i]}</h3>
-                <p>${text[i]}</p>
-            </div>
-        </div>`
-    thumb += `
-        <div class="thumb">
-            <img src="${items[i]}" alt="">
-        </div>
-    `
-}
-
 itemsRef.innerHTML = item;
 document.getElementsByClassName('item')[active].classList.add('active');
 
@@ -130,7 +114,7 @@ next.addEventListener('click', function() {
 
         document.querySelector('.thumb.active').classList.remove('active');
         document.getElementsByClassName('thumb')[active].classList.add('active');
-    } else if(active == items.length - 1) {                                             // Il ciclo INFINITO è BONUS
+    } else if(active == items.length - 1) {                                             
         active = 0;
         document.querySelector('.item.active').classList.remove('active');
         document.getElementsByClassName('item')[active].classList.add('active');
