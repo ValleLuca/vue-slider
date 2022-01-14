@@ -24,34 +24,33 @@ var app = new Vue({
                 {descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam' }
             ]
         },
-        boxProva: {
-            box1: [
-                {image: 'img/01.jpg' },
-                {title: 'Svezia' },
-                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
-            ],
-            box2: [
-                {image: 'img/02.jpg' },
-                {title: 'Svizzera' },
-                {descr: 'Lorem ipsum.' },
-            ],
-            box3: [
-                {image: 'img/03.jpg' },
-                {title: 'Gran Bretagna' },
-                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.' },
-            ],
-            box4: [
-                {image: 'img/04.jpg' },
-                {title: 'Germania' },
-                {descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' },
-            ],
-            box5: [
-                {image: 'img/05.jpg' },
-                {title: 'Paradise' },
-                {descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam' }
-            ]
-        }
-      
+        boxProva: [
+            {
+                image: 'img/01.jpg',
+                title: 'Svezia',
+                descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+            },
+            {
+                image: 'img/02.jpg',
+                title: 'Svizzera',
+                descr: 'Lorem ipsum.'
+            },
+            {
+                image: 'img/03.jpg',
+                title: 'Gran Bretagna',
+                descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+            },
+            {
+                image: 'img/04.jpg',
+                title: 'Germania',
+                descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' 
+            },
+            {
+                image: 'img/05.jpg',
+                title: 'Paradise',
+                descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam'
+            }
+        ]
     }
   })
 
