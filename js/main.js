@@ -37,7 +37,7 @@ var app = new Vue({
             {
                 image: 'img/04.jpg',
                 title: 'Germania',
-                descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.' 
+                descr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.'
             },
             {
                 image: 'img/05.jpg',
@@ -45,57 +45,36 @@ var app = new Vue({
                 descr: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam'
             }
         ],
-        
+        contatore: 0,
+    },
+    methods: {
+        aggClasse: function(i){
+            if(i == this.contatore){
+                return "active";
+            };
+        },
+        bottonePrev: function(){
+            if(this.contatore <= 0){
+                this.contatore = this.box.length - 1;
+            }
+            else
+            {
+                this.contatore --;
+            }
+            
+        },
+        bottoneNext: function(){
+            if(this.contatore >= this.box.length - 1){
+                this.contatore = 0;
+            }
+            else
+            {
+                this.contatore ++;
+            }
+            
+        },
+        previewClick: function(iclick){
+            this.contatore = iclick;
+        }
     }
   })
-
-const itemsRef = document.getElementsByClassName('items')[0];
-const thumbsRef = document.getElementsByClassName('thumbs')[0];
-let item = '';
-let thumb = '';
-let active = 1;
-
-itemsRef.innerHTML = item;
-document.getElementsByClassName('item')[active].classList.add('active');
-
-thumbsRef.innerHTML += thumb;
-document.getElementsByClassName('thumb')[active].classList.add('active');
-
-const prev = document.querySelector('.prev');
-prev.addEventListener('click', function() {
-    if(active == 0) {                                                                   // Il ciclo INFINITO è BONUS
-        active = items.length - 1; 
-
-        document.querySelector('.item.active').classList.remove('active');
-        document.getElementsByClassName('item')[active].classList.add('active');
-
-        document.querySelector('.thumb.active').classList.remove('active');
-        document.getElementsByClassName('thumb')[active].classList.add('active');
-    } else if(active < items.length) {
-        --active
-        document.querySelector('.item.active').classList.remove('active');
-        document.getElementsByClassName('item')[active].classList.add('active');
-
-        document.querySelector('.thumb.active').classList.remove('active');
-        document.getElementsByClassName('thumb')[active].classList.add('active');
-    } 
-});
-
-const next = document.querySelector('.next');
-next.addEventListener('click', function() {
-    if(active < items.length - 1) {
-        ++active
-        document.querySelector('.item.active').classList.remove('active');
-        document.getElementsByClassName('item')[active].classList.add('active');
-
-        document.querySelector('.thumb.active').classList.remove('active');
-        document.getElementsByClassName('thumb')[active].classList.add('active');
-    } else if(active == items.length - 1) {                                             
-        active = 0;
-        document.querySelector('.item.active').classList.remove('active');
-        document.getElementsByClassName('item')[active].classList.add('active');
-
-        document.querySelector('.thumb.active').classList.remove('active');
-        document.getElementsByClassName('thumb')[active].classList.add('active');
-    }
-});
