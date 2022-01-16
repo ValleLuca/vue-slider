@@ -15,7 +15,7 @@
         <div class="container">
             <!-- Immagini con testo -->
             <div class="items">
-                <div v-for="(post,index) in box" class="item" :class="aggClasse(index)">
+                <div v-for="(post,index) in box" class="item" :class="aggClasse(index)" >
                     <img :src="post.image">
                     <div class="text">
                         <h3>{{post.title}}</h3>

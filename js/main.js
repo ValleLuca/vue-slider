@@ -46,6 +46,7 @@ var app = new Vue({
             }
         ],
         contatore: 0,
+        clock: null
     },
     methods: {
         aggClasse: function(i){
@@ -75,6 +76,9 @@ var app = new Vue({
         },
         previewClick: function(iclick){
             this.contatore = iclick;
+        },
+        mounted : function(){
+            setInterval(this.bottoneNext, 3000);
         }
     }
   })
